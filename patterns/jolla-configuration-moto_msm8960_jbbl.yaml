@@ -28,5 +28,15 @@ Requires:
 # needs some configuration to get all features working
 - csd
 
+# Pre-installed applications
+- sailfish-office
+- jolla-calculator
+- jolla-email
+- jolla-notes
+- jolla-clock
+- jolla-mediaplayer
+- jolla-calendar
+- sailfish-weather
+
 Summary: Jolla Configuration moto_msm8960_jbbl
 

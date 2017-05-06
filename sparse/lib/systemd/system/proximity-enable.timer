@@ -1,0 +1,10 @@
+[Unit]
+Description=Enable proximity after booting
+
+[Timer]
+OnBootSec=2min
+
+[Install]
+WantedBy=multi-user.target
+
+

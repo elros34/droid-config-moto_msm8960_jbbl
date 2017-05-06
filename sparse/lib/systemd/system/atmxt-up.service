@@ -1,0 +1,11 @@
+[Unit]
+Description=atmxt up
+Wants=local-fs.target
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/modprobe atmxt
+
+[Install]
+WantedBy=basic.target

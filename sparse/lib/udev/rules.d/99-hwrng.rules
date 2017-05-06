@@ -1,0 +1,1 @@
+SUBSYSTEM=="misc", KERNEL=="hw_random", ACTION=="add", TEST!="/dev/hw_random", SYMLINK+="hw_random"

@@ -1,0 +1,4 @@
+[desktop/sailfish/silica]
+theme_pixel_ratio=1.0
+default_allowed_orientations=3
+

@@ -1,0 +1,7 @@
+[Unit]
+Description=Enable proxmity
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c "echo 1 > /sys/module/ct406/parameters/prox_enable"
+

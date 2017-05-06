@@ -1,0 +1,13 @@
+[Unit]
+Description=wlan up
+Wants=local-fs.target
+After=local-fs.target
+Before=network.target
+Conflicts=shutdown.target actdead.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/modprobe wlan
+
+[Install]
+WantedBy=network.target
