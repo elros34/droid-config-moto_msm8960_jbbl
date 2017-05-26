@@ -94,9 +94,5 @@ Requires:
 # For mounting SD card automatically
 - sd-utils
 
-# Instead broken jolla-camera
-- harbour-cameraplus
-
-
 Summary: Jolla HW Adaptation moto_msm8960_jbbl
 
