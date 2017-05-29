@@ -1,0 +1,9 @@
+[Unit]
+Description=Change vibra enable_us owner
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "chown nemo:nemo /sys/module/board_mmi_vibrator/parameters/enable_us"
+
+[Install]
+WantedBy=multi-user.target
