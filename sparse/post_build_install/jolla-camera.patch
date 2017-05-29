@@ -1,0 +1,92 @@
+diff -ur a/pages/capture/CaptureOverlay.qml b/pages/capture/CaptureOverlay.qml
+--- a/pages/capture/CaptureOverlay.qml	2016-11-27 22:04:37.000000000 +0100
++++ b/pages/capture/CaptureOverlay.qml	2017-05-21 00:03:07.043697095 +0200
+@@ -25,6 +25,8 @@
+     property int _recordingDuration: clock.enabled ? ((clock.time - _startTime) / 1000) : 0
+     property var _startTime: new Date()
+ 
++    property alias zoomIndicator: zoomIndicator
++
+     width: captureView.width
+     height: captureView.height
+ 
+diff -ur a/pages/capture/CaptureView.qml b/pages/capture/CaptureView.qml
+--- a/pages/capture/CaptureView.qml	2016-11-27 22:04:37.000000000 +0100
++++ b/pages/capture/CaptureView.qml	2017-05-29 22:36:32.906242796 +0200
+@@ -387,8 +387,6 @@
+ 
+         viewfinder {
+             resolution: Settings.mode.viewfinderResolution
+-            minimumFrameRate: 30
+-            maximumFrameRate: 30
+         }
+ 
+         metaData {
+@@ -608,26 +606,53 @@
+ 
+     MediaKey {
+         id: volumeUp
+-        enabled: camera.imageCapture.ready
+-                    && keysResource.acquired
+-                    && camera.captureMode == Camera.CaptureStillImage
+-                    && !captureButtonPressed
+-                    && !captureView._captureOnFocus
++        enabled: true
+         key: Qt.Key_VolumeUp
+-        onPressed: camera.autoFocus()
+-        onReleased: {
+-            if (enabled)
+-                captureView._triggerCapture()
++        onPressed: {
++            camera.digitalZoom = Math.min(camera.maximumDigitalZoom, camera.digitalZoom + 1)
++            captureOverlay.zoomIndicator.maximumZoom = camera.maximumDigitalZoom
++            captureOverlay.zoomIndicator.show()
++        }
++        onRepeat: {
++            camera.digitalZoom = Math.min(camera.maximumDigitalZoom, camera.digitalZoom + 1)
++            captureOverlay.zoomIndicator.show()
+         }
+     }
+     MediaKey {
+         id: volumeDown
+-        enabled: volumeUp.enabled
++        enabled: true
+         key: Qt.Key_VolumeDown
+-        onPressed: camera.autoFocus()
+-        onReleased: {
+-            if (enabled)
+-                captureView._triggerCapture()
++        onPressed: {
++            camera.digitalZoom = Math.max(1, camera.digitalZoom - 1)
++            captureOverlay.zoomIndicator.show()
++        }
++
++        onRepeat: {
++            camera.digitalZoom = Math.max(1, camera.digitalZoom - 1)
++            captureOverlay.zoomIndicator.show()
++        }
++    }
++
++    property bool camKeyEnabled: camera.imageCapture.ready
++                                 && keysResource.acquired
++                                 && camera.captureMode == Camera.CaptureStillImage
++                                 && !captureButtonPressed
++                                 && !captureView._captureOnFocus
++
++    DBusInterface {
++        service: "org.photonq_helper"
++        path: "/org/photonq_helper/signal"
++        iface: "org.photonq_helper.signal"
++        bus: DBusInterface.SessionBus
++        signalsEnabled: true
++
++        function cameraKey(status) {
++            if (status === "pressed")
++                camera.autoFocus()
++            else {
++                if (camKeyEnabled)
++                    captureView._triggerCapture()
++            }
+         }
+     }
+ 
