@@ -24,8 +24,7 @@ Requires:
 - hybris-libsensorfw-qt5
 
 # Vibra
-- ngfd-plugin-droid-vibrator
-- qt5-feedback-haptics-droid-vibrator
+- qt5-feedback-haptics-ffmemless
 
 # Needed for /dev/touchscreen symlink
 - qt5-plugin-generic-evdev
@@ -90,6 +89,7 @@ Requires:
 - sdcard-moded
 - harbour-warehouse
 - lipstick-qt5
+- patch
 
 # For mounting SD card automatically
 - sd-utils
