@@ -90,6 +90,7 @@ Requires:
 - harbour-warehouse
 - lipstick-qt5
 - patch
+- harbour-messwerk 
 
 # For mounting SD card automatically
 - sd-utils
