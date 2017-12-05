@@ -7,7 +7,7 @@ Conflicts=shutdown.target actdead.target
 
 [Service]
 Type=oneshot
-ExecStart=/sbin/modprobe wlan
+ExecStart=/bin/bash -c "/sbin/modprobe wlan; rfkill unblock wlan"
 
 [Install]
 WantedBy=network.target

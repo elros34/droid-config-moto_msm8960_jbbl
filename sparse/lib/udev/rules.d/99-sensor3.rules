@@ -1,0 +1,1 @@
+SUBSYSTEM=="platform", KERNEL=="SENSOR.3", ACTION=="add", TAG+="systemd"

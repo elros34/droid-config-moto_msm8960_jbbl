@@ -1,0 +1,12 @@
+[Unit]
+Description=Zram-based swap (compressed RAM block devices)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/droid/zramswap start
+ExecStop=/usr/bin/droid/zramswap stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target 
+
