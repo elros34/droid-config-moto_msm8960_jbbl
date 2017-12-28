@@ -95,5 +95,8 @@ Requires:
 # For mounting SD card automatically
 - sd-utils
 
+# Bunch of dirty hacks
+- sfos-moto_msm8960_jbbl-adaptation
+
 Summary: Jolla HW Adaptation moto_msm8960_jbbl
 
