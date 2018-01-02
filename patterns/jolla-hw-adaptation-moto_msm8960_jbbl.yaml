@@ -88,7 +88,6 @@ Requires:
 - photonq-helper
 - sdcard-moded
 - harbour-warehouse
-- lipstick-qt5
 - patch
 - harbour-messwerk 
 
