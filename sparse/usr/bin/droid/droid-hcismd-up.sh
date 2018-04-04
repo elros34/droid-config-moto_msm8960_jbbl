@@ -3,7 +3,7 @@
 # Maximum number of attempts to enable hcismd to try to get
 # hci0 to come online.  Writing to sysfs too early seems to
 # not work, so we loop.
-MAXTRIES=15
+MAXTRIES=20
 
 #setprop bluetooth.hciattach true
 setprop ro.qualcomm.bt.hci_transport smd

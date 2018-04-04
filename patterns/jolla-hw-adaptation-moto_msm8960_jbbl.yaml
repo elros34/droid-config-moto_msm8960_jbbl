@@ -80,13 +80,12 @@ Requires:
 
 # Tools
 - mce-tools
-- strace
 - systemd-analyze
 - gstreamer1.0-droid-tools
 - gstreamer1.0-tools 
 - photonq-helper
 - sdcard-moded
-- harbour-warehouse
+- harbour-storeman
 - patch
 - harbour-messwerk 
 
