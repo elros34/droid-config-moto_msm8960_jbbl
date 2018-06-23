@@ -1,6 +1,7 @@
 [Unit]
 Description=Sensor daemon for sensor framework
 After=dbus.socket sys-devices-platform-SENSOR.3.device
+After=oneshot-root.service
 Requires=dbus.service sys-devices-platform-SENSOR.3.device
 Conflicts=actdead.target
 

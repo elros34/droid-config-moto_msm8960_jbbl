@@ -90,7 +90,7 @@ Requires:
 - harbour-messwerk 
 
 # For mounting SD card automatically
-- sd-utils
+- udisks2
 
 # Bunch of dirty hacks
 - sfos-moto_msm8960_jbbl-adaptation

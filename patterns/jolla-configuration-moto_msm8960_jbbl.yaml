@@ -5,10 +5,11 @@ Description: Pattern with packages for moto_msm8960_jbbl configurations
 Name: jolla-configuration-moto_msm8960_jbbl
 Requires:
 - pattern:jolla-hw-adaptation-moto_msm8960_jbbl
-- pattern:jolla-sailfish-applications
-- pattern:jolla-ui-wayland
+
+- patterns-sailfish-applications
+- patterns-sailfish-ui
 # For devices with cellular modem. Those without one, please comment out:
-- pattern:jolla-sailfish-cellular-apps
+- patterns-sailfish-cellular-apps
 # Early stages of porting benefit from these:
 - pattern:sailfish-porter-tools
 

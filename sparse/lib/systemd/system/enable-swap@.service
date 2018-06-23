@@ -1,0 +1,12 @@
+[Unit]
+Description=Handle sdcard
+After=init-done.service dev-%i.device
+BindsTo=dev-%i.device
+Conflicts=rescue.target actdead.target factory-test.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash -c "/usr/bin/systemd-cat -t enable-swap /bin/echo \"swapon /dev/%i\"; swapon /dev/%i"
+ExecStop=/bin/bash -c "/usr/bin/systemd-cat -t enable-swap /bin/echo \"swapoff /dev/%i\"; swapoff /dev/%i"
+

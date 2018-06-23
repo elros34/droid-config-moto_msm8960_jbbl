@@ -1,0 +1,1 @@
+SUBSYSTEM=="block", KERNEL=="mmcblk1*", ACTION=="add", ENV{ID_FS_TYPE}=="swap", MODE="0660", TAG+="systemd", ENV{SYSTEMD_WANTS}="enable-swap@%k.service"
