@@ -5,6 +5,7 @@ Description: Pattern with packages for moto_msm8960_jbbl HW Adaptation
 Name: jolla-hw-adaptation-moto_msm8960_jbbl
 Requires:
 - droid-hal-moto_msm8960_jbbl
+- droid-hal-moto_msm8960_jbbl-detritus
 - droid-hal-moto_msm8960_jbbl-img-boot
 - droid-hal-moto_msm8960_jbbl-kernel-modules
 - droid-config-moto_msm8960_jbbl-sailfish
