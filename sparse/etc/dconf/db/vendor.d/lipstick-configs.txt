@@ -1,2 +1,2 @@
 [desktop/lipstick-jolla-home/peekfilter]
-boundaryWidth=40
+boundaryWidth=35

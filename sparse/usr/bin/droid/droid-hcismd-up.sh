@@ -45,6 +45,7 @@ while [ ! $i -gt $MAXTRIES ]  ; do
         # must have gotten through all our retries, fail
         exit 1
     fi
+    i=$((++i))
 done
 rfkill unblock all
 hciconfig hci0 up
