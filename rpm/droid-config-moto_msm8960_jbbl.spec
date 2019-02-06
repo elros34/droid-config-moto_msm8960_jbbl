@@ -25,3 +25,4 @@
 Provides: usb-moded-mass-storage-android-config
 
 %include droid-configs-device/droid-configs.inc
+

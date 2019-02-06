@@ -23,7 +23,7 @@ setprop ro.bluetooth.dun false
 setprop ro.qualcomm.bluetooth.map true
 
 i=1
-while [ ! $i -gt $MAXTRIES ]  ; do
+while true; do
     rfkill unblock all
     echo 1 > /sys/module/hci_smd/parameters/hcismd_set
     if [ -e /sys/class/bluetooth/hci0 ] ; then
@@ -47,6 +47,4 @@ while [ ! $i -gt $MAXTRIES ]  ; do
     fi
     i=$((++i))
 done
-rfkill unblock all
-hciconfig hci0 up
 

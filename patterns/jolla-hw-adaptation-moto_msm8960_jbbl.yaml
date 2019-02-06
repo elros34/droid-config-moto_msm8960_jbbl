@@ -85,7 +85,6 @@ Requires:
 - gstreamer1.0-droid-tools
 - gstreamer1.0-tools 
 - photonq-helper
-- sdcard-moded
 - harbour-storeman
 - patch
 - harbour-messwerk 
@@ -95,6 +94,9 @@ Requires:
 
 # Bunch of dirty hacks
 - sfos-moto_msm8960_jbbl-adaptation
+
+# Flashlight
+- jolla-settings-system-flashlight
 
 Summary: Jolla HW Adaptation moto_msm8960_jbbl
 
