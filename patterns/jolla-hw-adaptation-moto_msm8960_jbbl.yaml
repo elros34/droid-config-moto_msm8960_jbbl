@@ -88,6 +88,7 @@ Requires:
 - harbour-storeman
 - patch
 - harbour-messwerk 
+- qt5-qtdeclarative-qmlscene
 
 # For mounting SD card automatically
 - udisks2

@@ -1,2 +1,2 @@
-KERNEL=="event*", SUBSYSTEM=="input", ATTRS{name}=="atmxt-i2c", ACTION=="add", TEST!="/dev/touchscreen", SYMLINK+="touchscreen"
-KERNEL=="event*", SUBSYSTEM=="input", ATTRS{name}=="melfas-ts", ACTION=="add", TEST!="/dev/touchscreen", SYMLINK+="touchscreen"
+KERNEL=="event*", SUBSYSTEM=="input", ATTRS{name}=="atmxt-i2c", ACTION=="add", TEST!="/dev/touchscreen", SYMLINK+="touchscreen", ENV{ID_INPUT_KEY}="0"
+KERNEL=="event*", SUBSYSTEM=="input", ATTRS{name}=="melfas-ts", ACTION=="add", TEST!="/dev/touchscreen", SYMLINK+="touchscreen", ENV{ID_INPUT_KEY}="0"
