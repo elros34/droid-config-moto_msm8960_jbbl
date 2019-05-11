@@ -89,6 +89,8 @@ Requires:
 - patch
 - harbour-messwerk 
 - qt5-qtdeclarative-qmlscene
+- connman-tools
+- ncurses
 
 # For mounting SD card automatically
 - udisks2
