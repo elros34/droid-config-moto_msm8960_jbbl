@@ -10,18 +10,6 @@ setprop ro.qualcomm.bt.hci_transport smd
 setprop qcom.bt.dev_power_class 2
 setprop qcom.bt.le_dev_pwr_class 2
 
-# From /system/etc/init.qcom.bt.sh
-setprop ro.qualcomm.bluetooth.opp true
-setprop ro.qualcomm.bluetooth.hfp true
-setprop ro.qualcomm.bluetooth.hsp true
-setprop ro.qualcomm.bluetooth.pbap true
-setprop ro.qualcomm.bluetooth.ftp true
-setprop ro.qualcomm.bluetooth.nap true
-setprop ro.bluetooth.sap false
-setprop ro.bluetooth.dun false
-#setprop qcom.bt.le_dev_pwr_class 1
-setprop ro.qualcomm.bluetooth.map true
-
 i=1
 while true; do
     rfkill unblock all

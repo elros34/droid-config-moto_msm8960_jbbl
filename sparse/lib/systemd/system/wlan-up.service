@@ -1,13 +1,13 @@
 [Unit]
 Description=wlan up
 Wants=local-fs.target
-After=local-fs.target
-Before=network.target
+After=local-fs.target droid-hal-init.service
+Before=connman.service
 Conflicts=shutdown.target actdead.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c "/sbin/modprobe wlan; rfkill unblock wlan"
+ExecStart=/bin/bash -c "/sbin/modprobe wlan; sleep 2; rfkill unblock wlan"
 
 [Install]
 WantedBy=network.target

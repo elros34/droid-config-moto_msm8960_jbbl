@@ -1,0 +1,1 @@
+KERNELS=="input*", SUBSYSTEMS=="input", ATTRS{name}=="keypad_8960", ACTION=="add", TEST=="/sys/module/pmic8xxx_keypad/parameters/media_keys_enabled", RUN+="/bin/chown root:input /sys/module/pmic8xxx_keypad/parameters/media_keys_enabled"
