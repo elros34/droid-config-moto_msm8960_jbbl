@@ -1,0 +1,2 @@
+[desktop/lipstick-jolla-home]
+options='grp:ctrl_alt_toggle'
