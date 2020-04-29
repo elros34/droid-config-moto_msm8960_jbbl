@@ -33,6 +33,9 @@ Requires:
 # needs some configuration to get all features working
 - csd
 
+- jolla-settings-system-flashlight
+- jolla-settings-system-nfc
+
 # Pre-installed applications
 - sailfish-office
 - jolla-calculator

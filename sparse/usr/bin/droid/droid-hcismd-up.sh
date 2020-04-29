@@ -10,11 +10,11 @@ setprop ro.qualcomm.bt.hci_transport smd
 setprop qcom.bt.dev_power_class 2
 setprop qcom.bt.le_dev_pwr_class 2
 
-i=1
-while true; do
+i=0
+while [ $i -lt $MAXTRIES ]; do
     rfkill unblock all
     echo 1 > /sys/module/hci_smd/parameters/hcismd_set
-    if [ -e /sys/class/bluetooth/hci0 ] ; then
+    if [ -e /sys/class/bluetooth/hci0 ]; then
         rfkill unblock all
         hciconfig hci0 up
         # found hci0, exit successfully
@@ -28,10 +28,7 @@ while true; do
         exit 0
     fi
     sleep 1
-    if [ $i == $MAXTRIES ] ; then
-        # must have gotten through all our retries, fail
-        exit 1
-    fi
-    i=$((++i))
+    ((++i))
 done
+exit 1
 
