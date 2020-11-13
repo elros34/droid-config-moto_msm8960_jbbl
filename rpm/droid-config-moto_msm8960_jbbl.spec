@@ -25,4 +25,6 @@
 Provides: usb-moded-mass-storage-android-config
 
 %include droid-configs-device/droid-configs.inc
+%include patterns/patterns-sailfish-device-adaptation-moto_msm8960_jbbl.inc
+%include patterns/patterns-sailfish-device-configuration-moto_msm8960_jbbl.inc
 

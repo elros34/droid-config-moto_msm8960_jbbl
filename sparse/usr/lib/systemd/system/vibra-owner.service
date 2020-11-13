@@ -3,7 +3,7 @@ Description=Change vibra enable_us owner
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c "chown nemo:nemo /sys/module/board_mmi_vibrator/parameters/enable_us"
+ExecStart=/bin/chown root:input /sys/module/board_mmi_vibrator/parameters/enable_us
 
 [Install]
 WantedBy=multi-user.target

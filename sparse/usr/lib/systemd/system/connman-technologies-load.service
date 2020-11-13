@@ -1,0 +1,13 @@
+[Unit]
+Description=Connman technologies load in flight mode
+Wants=connman.service
+After=connman.service oneshot-root-late.service
+Conflicts=shutdown.target actdead.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/droid/connman-technologies-control.sh load
+
+[Install]
+WantedBy=multi-user.target
+
