@@ -10,8 +10,7 @@ setprop ro.qualcomm.bt.hci_transport smd
 setprop qcom.bt.dev_power_class 2
 setprop qcom.bt.le_dev_pwr_class 2
 
-i=0
-while [ $i -lt $MAXTRIES ]; do
+for i in $(seq 1 $MAXTRIES); do
     rfkill unblock all
     echo 1 > /sys/module/hci_smd/parameters/hcismd_set
     if [ -e /sys/class/bluetooth/hci0 ]; then
@@ -28,7 +27,6 @@ while [ $i -lt $MAXTRIES ]; do
         exit 0
     fi
     sleep 1
-    ((++i))
 done
 exit 1
 

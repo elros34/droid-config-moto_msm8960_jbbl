@@ -1,0 +1,15 @@
+/etc/acdbdata
+/etc/audio_platform_info.xml
+/etc/izat.conf
+/etc/lowi.conf
+/etc/media_codecs_google_audio.xml
+/etc/media_codecs_ffmpeg.xml
+/etc/media_codecs_google_telephony.xml
+/etc/media_codecs_google_video.xml
+/etc/media_codecs_performance.xml
+/etc/mixer_paths.xml
+/etc/sap.conf
+/etc/sec_config
+/etc/xtwifi.conf
+/etc/xtra_root_cert.pem
+

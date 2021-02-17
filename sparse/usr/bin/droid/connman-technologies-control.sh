@@ -22,7 +22,7 @@ echo "using config: $config"
 if [ "$1" == "load" ] && [ -f "$config" ]; then
     # started as root via systemd service
     for tech in wifi bluetooth gps; do
-        enabled=$(pcregrep -o1 "$tech=(True|False)" $config)
+        enabled=$(pcregrep -o1 "$tech=(True|False)" $config || echo "False")
         [ "$enabled" == "True" ] && connmanctl enable "$tech"
     done
     rm -f $config
@@ -31,11 +31,11 @@ elif [ "$1" == "save" ]; then
     /bin/rm -f $config
     techs="$(connmanctl technologies)"
     isTechEnabled() {
-        # In 3.4.0.x gps powered state is always on (provided location is enabled) in online mode and off in offline mode
+        # In 3.4.0.x when location is enabled, gps powered state is always on in online mode and off in offline mode
         if [ "$1" == "gps" ]; then
             [ "$(pcregrep -o1 '^enabled=(true|false)' /etc/location/location.conf)" == "true" ] && echo "True" || echo "False"
         else
-            pcregrep -o1 "Type = $1 Powered = (True|False)" <<< $techs
+            pcregrep -M -o1 "Type = $1\s+Powered = (True|False)" <<< $techs
         fi
     }
     for tech in wifi bluetooth gps; do

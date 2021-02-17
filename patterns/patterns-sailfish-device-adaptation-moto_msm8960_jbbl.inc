@@ -60,6 +60,7 @@ Requires: usb-moded
 Requires: usb-moded-connection-sharing-android-config
 # android diag mode only usable for certain android tools
 #Requires: usb-moded-diag-mode-android
+Provides: usb-moded-mass-storage-android-config
 
 # hammerhead, grouper, and maguro use this in scripts, so include for all
 Requires: rfkill
@@ -75,23 +76,26 @@ Requires: geoclue-provider-hybris
 #Requires: jolla-mediaplayer-radio
 
 # NFC
-Requires: nfcd-pn54x-plugin
-Requires: nfcd-mce-plugin
+Recommends: nfcd-pn54x-plugin
+Recommends: nfcd-mce-plugin
+
+# No device reset
+Provides: jolla-settings-system-reset
 
 # Tools
 Requires: mce-tools
-Requires: systemd-analyze
-Requires: gstreamer1.0-droid-tools
+Recommends: systemd-analyze
+Recommends: gstreamer1.0-droid-tools
 Requires: gstreamer1.0-tools 
 Requires: photonq-helper
-Requires: harbour-storeman
+Recommends: harbour-storeman
 Requires: patch
-Requires: harbour-messwerk 
+Recommends: harbour-messwerk 
 Requires: qt5-qtdeclarative-qmlscene
 Requires: connman-tools
 Requires: ncurses
 Requires: rsync
-Requires: nfcd-tools
+Recommends: nfcd-tools
 
 # For mounting SD card automatically
 Requires: udisks2
