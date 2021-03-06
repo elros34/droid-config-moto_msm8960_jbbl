@@ -76,26 +76,27 @@ Requires: geoclue-provider-hybris
 #Requires: jolla-mediaplayer-radio
 
 # NFC
-Recommends: nfcd-pn54x-plugin
-Recommends: nfcd-mce-plugin
+Requires: nfcd-pn54x-plugin
+Requires: nfcd-mce-plugin
 
 # No device reset
 Provides: jolla-settings-system-reset
 
 # Tools
 Requires: mce-tools
-Recommends: systemd-analyze
-Recommends: gstreamer1.0-droid-tools
+Requires: systemd-analyze
+Requires: gstreamer1.0-droid-tools
 Requires: gstreamer1.0-tools 
 Requires: photonq-helper
-Recommends: harbour-storeman
+Requires: harbour-storeman
 Requires: patch
-Recommends: harbour-messwerk 
+Requires: harbour-messwerk 
 Requires: qt5-qtdeclarative-qmlscene
 Requires: connman-tools
 Requires: ncurses
 Requires: rsync
-Recommends: nfcd-tools
+Requires: nfcd-tools
+Requires: csd
 
 # For mounting SD card automatically
 Requires: udisks2
