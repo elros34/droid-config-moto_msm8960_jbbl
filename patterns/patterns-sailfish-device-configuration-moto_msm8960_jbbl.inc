@@ -25,6 +25,8 @@ Requires: zypper
 Requires: gnu-bash
 # in sfos 4.0.1 /etc/profile.d/developer-profile.sh fails if busybox pidof is used
 Requires: psmisc-tools
+# busybox ps doesn't support -p switch
+Requires: procps-ng
 
 Requires: sailfish-content-graphics-z%{icon_res}
 
