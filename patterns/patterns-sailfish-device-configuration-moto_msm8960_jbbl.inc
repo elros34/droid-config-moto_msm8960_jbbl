@@ -48,17 +48,17 @@ Requires: geoclue-provider-mlsdb
 # needs some configuration to get all features working
 
 Requires: jolla-settings-system-flashlight
-Requires: jolla-settings-system-nfc
+Recommends: jolla-settings-system-nfc
 
 # Pre-installed applications
 Requires: sailfish-office
 Requires: jolla-calculator
 Requires: jolla-email
-Requires: jolla-notes
+Recommends: jolla-notes
 Requires: jolla-clock
-Requires: jolla-mediaplayer
+Recommends: jolla-mediaplayer
 Requires: jolla-calendar
-Requires: sailfish-weather
+Recommends: sailfish-weather
 
 %description -n patterns-sailfish-device-configuration-moto_msm8960_jbbl
 Pattern with packages for moto_msm8960_jbbl configurations
