@@ -71,10 +71,6 @@ Requires: jolla-devicelock-plugin-encsfa
 # For GPS
 Requires: geoclue-provider-hybris-hal
 
-# For FM radio on some QCOM devices
-#Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
-#Requires: jolla-mediaplayer-radio
-
 # NFC
 Recommends: nfcd-pn54x-plugin
 Recommends: nfcd-mce-plugin
@@ -99,6 +95,9 @@ Recommends: nfcd-tools
 
 # For mounting SD card automatically
 Requires: udisks2
+
+# Splash screen
+Recommends: yamuisplash
 
 # Bunch of dirty hacks
 Requires: sfos-moto_msm8960_jbbl-adaptation
