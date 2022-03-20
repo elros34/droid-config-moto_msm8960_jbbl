@@ -1,3 +1,0 @@
-### module-droid-card
-load-module module-droid-card rate=48000 quirks=+input_atoi
-
