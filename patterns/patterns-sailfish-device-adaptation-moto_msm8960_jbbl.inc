@@ -26,7 +26,7 @@ Requires: qt5-feedback-haptics-ffmemless
 # Needed for /dev/touchscreen symlink
 Requires: qt5-plugin-generic-evdev
 
-Requires: pulseaudio-modules-droid
+Requires: pulseaudio-modules-droid-jb2q
 # for audio recording to work:
 Requires: qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
 
@@ -70,6 +70,9 @@ Requires: jolla-devicelock-plugin-encsfa
 
 # For GPS
 Requires: geoclue-provider-hybris-hal
+
+# Telephony
+Requires: ofono-ril-plugin
 
 # NFC
 Recommends: nfcd-pn54x-plugin

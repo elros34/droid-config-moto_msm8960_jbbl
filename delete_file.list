@@ -12,4 +12,6 @@
 /etc/sec_config
 /etc/xtwifi.conf
 /etc/xtra_root_cert.pem
+/etc/ofono/binder.conf
+/etc/ofono/binder.d/dual-sim.conf
 
