@@ -29,6 +29,8 @@ Recommends: psmisc-tools
 Recommends: procps-ng
 # 'busybox mv' doesn't even show error when trying to overwrite same file
 Recommends: gnu-coreutils
+# 'busybox grep' have no exclude-dir support
+Recommends: gnu-grep
 
 Requires: sailfish-content-graphics-z%{icon_res}
 
