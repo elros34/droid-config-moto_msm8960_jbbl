@@ -63,6 +63,9 @@ Recommends: jolla-mediaplayer
 Recommends: jolla-calendar
 Recommends: sailfish-weather
 
+# jolla-camera requires this booster, save some memory
+Provides: mapplauncherd-booster-silica-qt5-media
+
 %description -n patterns-sailfish-device-configuration-moto_msm8960_jbbl
 Pattern with packages for moto_msm8960_jbbl configurations
 
