@@ -31,6 +31,8 @@ Recommends: procps-ng
 Recommends: gnu-coreutils
 # 'busybox grep' have no exclude-dir support
 Recommends: gnu-grep
+# get rid of sp-rich-core which I have never really used
+Provides: jolla-settings-crash-reporter
 
 Requires: sailfish-content-graphics-z%{icon_res}
 
